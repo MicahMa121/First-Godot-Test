@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://b0g0kw00kqx7t"]
+
+[ext_resource type="PackedScene" uid="uid://fkh87werigi5" path="res://Scenes/player.tscn" id="1_7obx4"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" parent="." instance=ExtResource("1_7obx4")]
+position = Vector2(397, 293)
+
+[node name="Button" type="Button" parent="."]
+offset_left = 52.0
+offset_top = 36.0
+offset_right = 306.0
+offset_bottom = 140.0
+text = "Click Me"
+
+[connection signal="pressed" from="Button" to="Sprite2D" method="OnButtonPressed"]
